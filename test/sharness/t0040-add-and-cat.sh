@@ -345,6 +345,23 @@ test_add_cat_file() {
     echo "added Qmf35k66MZNW2GijohUmXQEWKZU4cCGTCwK6idfnt152wJ hello2.txt" >> expected &&
     test_cmp expected actual
   '
+
+  test_expect_success "ipfs add with multiple files of same name succeeds" '
+    mkdir -p mountdir/same-file/ &&
+    mkdir -p mountdir/hello2-content/ &&
+    cp mountdir/hello.txt mountdir/same-file/hello.txt &&
+    cp mountdir/hello2.txt mountdir/hello2-content/hello.txt &&
+    ipfs add mountdir/hello.txt mountdir/same-file/hello.txt mountdir/hello2-content/hello.txt >actual &&
+    rm mountdir/same-file/hello.txt mountdir/hello2-content/hello.txt  &&
+    rmdir mountdir/same-file mountdir/hello2-content
+  '
+
+  test_expect_success "ipfs add with multiple files of same name output looks good" '
+    echo "added QmVr26fY1tKyspEJBniVhqxQeEjhF78XerGiqWAwraVLQH hello.txt" >expected &&
+    echo "added QmVr26fY1tKyspEJBniVhqxQeEjhF78XerGiqWAwraVLQH hello.txt" >>expected &&
+    echo "added Qmf35k66MZNW2GijohUmXQEWKZU4cCGTCwK6idfnt152wJ hello.txt" >> expected &&
+    test_cmp expected actual
+  '
 }
 
 test_add_cat_5MB() {
