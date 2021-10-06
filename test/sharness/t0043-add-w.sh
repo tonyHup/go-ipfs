@@ -51,7 +51,7 @@ added QmQkib3f9XNX5sj6WEahLUPFpheTcwSRJwUCSvjcv8b9by _jo7
 added QmVPwNy8pZegpsNmsjjZvdTQn4uCeuZgtzhgWhRSQWjK9x gnz66h
 added QmTmc46fhKC8Liuh5soy1VotdnHcqLu3r6HpPGwDZCnqL1 '
 
-add_w_r='QmcCksBMDuuyuyfAMMNzEAx6Z7jTrdRy9a23WpufAhG9ji'
+add_w_r='Qme987pqNBhZZXy4ckeXiR7zaRQwBabB7fTgHurW2yJfNu'
 
 . lib/test-lib.sh
 
