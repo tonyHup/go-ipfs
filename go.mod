@@ -1,4 +1,4 @@
-module github.com/libp2p/go-libp2p-kad-dht
+module github.com/tonyHup/go-libp2p-kad-dht
 
 go 1.14
 
@@ -36,3 +36,5 @@ require (
 	go.opencensus.io v0.22.4
 	go.uber.org/zap v1.15.0
 )
+
+replace github.com/libp2p/go-libp2p v0.11.0 => github.com/tonyHup/go-libp2p v0.100.0
