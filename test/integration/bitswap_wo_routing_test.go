@@ -10,7 +10,7 @@ import (
 	"github.com/ipfs/go-ipfs/core"
 	"github.com/ipfs/go-ipfs/core/mock"
 	"github.com/ipfs/go-ipfs/core/node/libp2p"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	mocknet "github.com/tonyHup/go-libp2p/p2p/net/mock"
 )
 
 func TestBitswapWithoutRouting(t *testing.T) {

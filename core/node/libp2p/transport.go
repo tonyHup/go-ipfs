@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	config "github.com/ipfs/go-ipfs-config"
-	libp2p "github.com/libp2p/go-libp2p"
+	libp2p "github.com/tonyHup/go-libp2p"
 	metrics "github.com/libp2p/go-libp2p-core/metrics"
 	libp2pquic "github.com/libp2p/go-libp2p-quic-transport"
 	tcp "github.com/libp2p/go-tcp-transport"

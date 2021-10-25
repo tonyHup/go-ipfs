@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/ipfs/go-ipfs-config"
-	"github.com/libp2p/go-libp2p"
+	"github.com/tonyHup/go-libp2p"
 )
 
 var NatPortMap = simpleOpt(libp2p.NATPortMap())

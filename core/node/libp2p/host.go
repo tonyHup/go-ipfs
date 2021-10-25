@@ -3,13 +3,13 @@ package libp2p
 import (
 	"context"
 
-	"github.com/libp2p/go-libp2p"
+	"github.com/tonyHup/go-libp2p"
 	host "github.com/libp2p/go-libp2p-core/host"
 	peer "github.com/libp2p/go-libp2p-core/peer"
 	peerstore "github.com/libp2p/go-libp2p-core/peerstore"
 	routing "github.com/libp2p/go-libp2p-core/routing"
 	record "github.com/libp2p/go-libp2p-record"
-	routedhost "github.com/libp2p/go-libp2p/p2p/host/routed"
+	routedhost "github.com/tonyHup/go-libp2p/p2p/host/routed"
 
 	"github.com/ipfs/go-ipfs/core/node/helpers"
 	"github.com/ipfs/go-ipfs/repo"

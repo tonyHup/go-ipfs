@@ -2,7 +2,7 @@ package libp2p
 
 import (
 	config "github.com/ipfs/go-ipfs-config"
-	"github.com/libp2p/go-libp2p"
+	"github.com/tonyHup/go-libp2p"
 	noise "github.com/libp2p/go-libp2p-noise"
 	secio "github.com/libp2p/go-libp2p-secio"
 	tls "github.com/libp2p/go-libp2p-tls"

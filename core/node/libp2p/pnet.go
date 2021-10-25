@@ -8,7 +8,7 @@ import (
 
 	"github.com/ipfs/go-ipfs/repo"
 
-	"github.com/libp2p/go-libp2p"
+	"github.com/tonyHup/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/pnet"
 	"go.uber.org/fx"

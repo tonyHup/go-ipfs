@@ -15,13 +15,13 @@ import (
 	syncds "github.com/ipfs/go-datastore/sync"
 	config "github.com/ipfs/go-ipfs-config"
 
-	"github.com/libp2p/go-libp2p"
+	"github.com/tonyHup/go-libp2p"
 	host "github.com/libp2p/go-libp2p-core/host"
 	peer "github.com/libp2p/go-libp2p-core/peer"
 	pstore "github.com/libp2p/go-libp2p-core/peerstore"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
 
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	mocknet "github.com/tonyHup/go-libp2p/p2p/net/mock"
 )
 
 // NewMockNode constructs an IpfsNode for use in tests.

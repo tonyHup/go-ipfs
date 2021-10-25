@@ -21,7 +21,7 @@ import (
 	random "github.com/jbenet/go-random"
 	peer "github.com/libp2p/go-libp2p-core/peer"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	mocknet "github.com/tonyHup/go-libp2p/p2p/net/mock"
 )
 
 var log = logging.Logger("epictest")

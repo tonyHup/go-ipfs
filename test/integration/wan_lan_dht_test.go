@@ -18,7 +18,7 @@ import (
 	corenet "github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peerstore"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	mocknet "github.com/tonyHup/go-libp2p/p2p/net/mock"
 
 	ma "github.com/multiformats/go-multiaddr"
 )

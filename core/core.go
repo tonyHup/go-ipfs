@@ -37,8 +37,8 @@ import (
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	psrouter "github.com/libp2p/go-libp2p-pubsub-router"
 	record "github.com/libp2p/go-libp2p-record"
-	"github.com/libp2p/go-libp2p/p2p/discovery"
-	p2pbhost "github.com/libp2p/go-libp2p/p2p/host/basic"
+	"github.com/tonyHup/go-libp2p/p2p/discovery"
+	p2pbhost "github.com/tonyHup/go-libp2p/p2p/host/basic"
 	ma "github.com/multiformats/go-multiaddr"
 
 	"github.com/ipfs/go-ipfs/core/bootstrap"

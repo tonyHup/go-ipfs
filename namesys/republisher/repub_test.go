@@ -10,7 +10,7 @@ import (
 
 	goprocess "github.com/jbenet/goprocess"
 	peer "github.com/libp2p/go-libp2p-core/peer"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
+	mocknet "github.com/tonyHup/go-libp2p/p2p/net/mock"
 
 	ds "github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-ipns"
