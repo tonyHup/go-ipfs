@@ -27,7 +27,7 @@ type BuildCfg = node.BuildCfg // Alias for compatibility until we properly refac
 func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
 	// save this context as the "lifetime" ctx.
 	lctx := ctx
-    log.Info("======== 1")
+    log.Errorw("======== 1")
 
 	// derive a new context that ignores cancellations from the lifetime ctx.
 	ctx, cancel := context.WithCancel(valueContext{ctx})
@@ -60,7 +60,7 @@ func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
 		return stopErr
 	}
 	n.IsOnline = cfg.Online
-    log.Info("======== 2")
+    log.Errorw("======== 2")
 
 	go func() {
 		// Shut down the application if the lifetime context is canceled.
@@ -75,7 +75,7 @@ func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
 		case <-ctx.Done():
 		}
 	}()
-    log.Info("======== 3")
+    log.Errorw("======== 3")
 
 	if app.Err() != nil {
 		return nil, app.Err()
@@ -84,13 +84,13 @@ func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
 	if err := app.Start(ctx); err != nil {
 		return nil, err
 	}
-    log.Info("======== 4")
+    log.Errorw("======== 4")
 
 	// TODO: How soon will bootstrap move to libp2p?
 	if !cfg.Online {
 		return n, nil
 	}
-    log.Info("======== 5")
+    log.Errorw("======== 5")
 
 	return n, n.Bootstrap(bootstrap.DefaultBootstrapConfig)
 }
