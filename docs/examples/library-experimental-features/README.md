@@ -46,17 +46,17 @@ func createTempRepo(ctx context.Context) (string, error) {
 		return "", err
 	}
 	
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#ipfs-filestore
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#ipfs-filestore
 	cfg.Experimental.FilestoreEnabled = true
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#ipfs-urlstore
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#ipfs-urlstore
 	cfg.Experimental.UrlstoreEnabled = true
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#directory-sharding--hamt
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#directory-sharding--hamt
 	cfg.Experimental.ShardingEnabled = true
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#ipfs-p2p
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#ipfs-p2p
 	cfg.Experimental.Libp2pStreamMounting = true
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#p2p-http-proxy
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#p2p-http-proxy
 	cfg.Experimental.P2pHttpProxy = true
-	// https://github.com/ipfs/go-ipfs/blob/master/docs/experimental-features.md#strategic-providing
+	// https://github.com/tonyHup/go-ipfs/blob/master/docs/experimental-features.md#strategic-providing
 	cfg.Experimental.StrategicProviding = true
 
 	// Create the repo with the config

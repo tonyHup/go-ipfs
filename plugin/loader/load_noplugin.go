@@ -5,7 +5,7 @@ package loader
 import (
 	"errors"
 
-	iplugin "github.com/ipfs/go-ipfs/plugin"
+	iplugin "github.com/tonyHup/go-ipfs/plugin"
 )
 
 func init() {

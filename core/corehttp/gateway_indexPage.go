@@ -6,7 +6,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ipfs/go-ipfs/assets"
+	"github.com/tonyHup/go-ipfs/assets"
 	ipfspath "github.com/ipfs/go-path"
 )
 

@@ -182,7 +182,7 @@ test_localhost_gateway_response_should_contain \
   "Location: http://$DIR_CID.ipfs.localhost:$GWAY_PORT/"
 
 # Responses to the root domain of subdomain gateway hostname should Clear-Site-Data
-# https://github.com/ipfs/go-ipfs/issues/6975#issuecomment-597472477
+# https://github.com/tonyHup/go-ipfs/issues/6975#issuecomment-597472477
 test_localhost_gateway_response_should_contain \
   "request for localhost/ipfs/{CIDv1} returns Clear-Site-Data header to purge Origin cookies and storage" \
   "http://localhost:$GWAY_PORT/ipfs/$CIDv1" \
@@ -191,7 +191,7 @@ test_localhost_gateway_response_should_contain \
 # We return body with HTTP 301 so existing cli scripts that use path-based
 # gateway do not break (curl doesn't auto-redirect without passing -L; wget
 # does not span across hostnames by default)
-# Context: https://github.com/ipfs/go-ipfs/issues/6975
+# Context: https://github.com/tonyHup/go-ipfs/issues/6975
 test_localhost_gateway_response_should_contain \
   "request for localhost/ipfs/{CIDv1} includes valid payload in body for CLI tools like curl" \
   "http://localhost:$GWAY_PORT/ipfs/$CIDv1" \
@@ -539,7 +539,7 @@ test_hostname_gateway_response_should_contain \
   "$CID_VAL"
 
 ## Test subdomain handling of CIDs that do not fit in a single DNS Label (>63chars)
-## https://github.com/ipfs/go-ipfs/issues/7318
+## https://github.com/tonyHup/go-ipfs/issues/7318
 ## ============================================================================
 
 # ed25519 fits under 63 char limit when represented in base36

@@ -14,7 +14,7 @@ import (
 	"go.uber.org/fx"
 )
 
-// See https://github.com/ipfs/go-ipfs/issues/7526 and
+// See https://github.com/tonyHup/go-ipfs/issues/7526 and
 // https://github.com/lucas-clemente/quic-go/releases/tag/v0.17.3.
 // TODO: remove this once the network has upgraded to > v0.6.0.
 func init() {

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	core "github.com/ipfs/go-ipfs/core"
-	coreapi "github.com/ipfs/go-ipfs/core/coreapi"
-	loader "github.com/ipfs/go-ipfs/plugin/loader"
+	core "github.com/tonyHup/go-ipfs/core"
+	coreapi "github.com/tonyHup/go-ipfs/core/coreapi"
+	loader "github.com/tonyHup/go-ipfs/plugin/loader"
 
 	"github.com/ipfs/go-ipfs-cmds"
 	config "github.com/ipfs/go-ipfs-config"

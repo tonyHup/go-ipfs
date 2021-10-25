@@ -41,15 +41,15 @@ import (
 	p2pbhost "github.com/tonyHup/go-libp2p/p2p/host/basic"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"github.com/ipfs/go-ipfs/core/bootstrap"
-	"github.com/ipfs/go-ipfs/core/node"
-	"github.com/ipfs/go-ipfs/core/node/libp2p"
-	"github.com/ipfs/go-ipfs/fuse/mount"
-	"github.com/ipfs/go-ipfs/namesys"
-	ipnsrp "github.com/ipfs/go-ipfs/namesys/republisher"
-	"github.com/ipfs/go-ipfs/p2p"
-	"github.com/ipfs/go-ipfs/peering"
-	"github.com/ipfs/go-ipfs/repo"
+	"github.com/tonyHup/go-ipfs/core/bootstrap"
+	"github.com/tonyHup/go-ipfs/core/node"
+	"github.com/tonyHup/go-ipfs/core/node/libp2p"
+	"github.com/tonyHup/go-ipfs/fuse/mount"
+	"github.com/tonyHup/go-ipfs/namesys"
+	ipnsrp "github.com/tonyHup/go-ipfs/namesys/republisher"
+	"github.com/tonyHup/go-ipfs/p2p"
+	"github.com/tonyHup/go-ipfs/peering"
+	"github.com/tonyHup/go-ipfs/repo"
 )
 
 var log = logging.Logger("core")

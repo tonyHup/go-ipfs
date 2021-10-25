@@ -10,9 +10,9 @@ import (
 	"strings"
 
 	cid "github.com/ipfs/go-cid"
-	core "github.com/ipfs/go-ipfs/core"
-	coreapi "github.com/ipfs/go-ipfs/core/coreapi"
-	namesys "github.com/ipfs/go-ipfs/namesys"
+	core "github.com/tonyHup/go-ipfs/core"
+	coreapi "github.com/tonyHup/go-ipfs/core/coreapi"
+	namesys "github.com/tonyHup/go-ipfs/namesys"
 	isd "github.com/jbenet/go-is-domain"
 	"github.com/libp2p/go-libp2p-core/peer"
 	mbase "github.com/multiformats/go-multibase"
@@ -442,13 +442,13 @@ func toSubdomainURL(hostname, path string, r *http.Request) (redirURL string, er
 		// Normalizations specific to /ipns/{libp2p-key}
 		if isPeerIDNamespace(ns) {
 			// Using Base36 for /ipns/ for consistency
-			// Context: https://github.com/ipfs/go-ipfs/pull/7441#discussion_r452372828
+			// Context: https://github.com/tonyHup/go-ipfs/pull/7441#discussion_r452372828
 			base = mbase.Base36
 
 			// PeerIDs represented as CIDv1 are expected to have libp2p-key
 			// multicodec (https://github.com/libp2p/specs/pull/209).
 			// We ease the transition by fixing multicodec on the fly:
-			// https://github.com/ipfs/go-ipfs/issues/5287#issuecomment-492163929
+			// https://github.com/tonyHup/go-ipfs/issues/5287#issuecomment-492163929
 			if multicodec != cid.Libp2pKey {
 				multicodec = cid.Libp2pKey
 			}
@@ -467,7 +467,7 @@ func toSubdomainURL(hostname, path string, r *http.Request) (redirURL string, er
 			return "", err
 		}
 		// 2. Make sure CID fits in a DNS label, adjust encoding if needed
-		//    (https://github.com/ipfs/go-ipfs/issues/7318)
+		//    (https://github.com/tonyHup/go-ipfs/issues/7318)
 		rootID, err = toDNSPrefix(rootID, rootCID)
 		if err != nil {
 			return "", err

@@ -6,13 +6,13 @@ aliases:
   restore_gomod: &restore_gomod
     restore_cache:
       keys:
-        - v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/go-ipfs/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
-        - v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/go-ipfs/go.sum" }}-
+        - v5-dep-{{ .Branch }}-{{ checksum "~/tonyHup/go-ipfs/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
+        - v5-dep-{{ .Branch }}-{{ checksum "~/tonyHup/go-ipfs/go.sum" }}-
         - v5-dep-{{ .Branch }}-
         - v5-dep-master-
   store_gomod: &store_gomod
       save_cache:
-        key: v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/go-ipfs/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
+        key: v5-dep-{{ .Branch }}-{{ checksum "~/tonyHup/go-ipfs/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
         paths:
           - ~/go/pkg/mod
           - ~/.cache/go-build/
@@ -177,14 +177,14 @@ jobs:
             npm install ipfs@^0.50.1
             npm install ipfs-interop@^3.0.0
             npm install mocha-circleci-reporter@0.0.3
-          working_directory: ~/ipfs/go-ipfs/interop
+          working_directory: ~/tonyHup/go-ipfs/interop
       - run:
           name: Running tests
           command: |
             mkdir -p /tmp/test-results/interop/
             export MOCHA_FILE="$(mktemp /tmp/test-results/interop/unit.XXXXXX.xml)"
             npx ipfs-interop -- -t node -f $(sed -n -e "s|^require('\(.*\)')$|test/\1|p" node_modules/ipfs-interop/test/node.js | circleci tests split) -- --reporter mocha-circleci-reporter
-          working_directory: ~/ipfs/go-ipfs/interop
+          working_directory: ~/tonyHup/go-ipfs/interop
           environment:
             IPFS_REUSEPORT: false
             LIBP2P_ALLOW_WEAK_RSA_KEYS: 1
@@ -215,13 +215,13 @@ jobs:
             done
       - restore_cache:
           keys:
-            - v1-go-api-{{ checksum "~/ipfs/go-ipfs/go-ipfs-api/go.sum" }}
+            - v1-go-api-{{ checksum "~/tonyHup/go-ipfs/go-ipfs-api/go.sum" }}
             - v1-go-api-
       - run:
           command: go test -v ./...
-          working_directory: ~/ipfs/go-ipfs/go-ipfs-api
+          working_directory: ~/tonyHup/go-ipfs/go-ipfs-api
       - save_cache:
-          key: v1-go-api-{{ checksum "~/ipfs/go-ipfs/go-ipfs-api/go.sum" }}
+          key: v1-go-api-{{ checksum "~/tonyHup/go-ipfs/go-ipfs-api/go.sum" }}
           paths:
             - ~/go/pkg/mod
             - ~/.cache/go-build/
@@ -241,16 +241,16 @@ jobs:
             git -C go-ipfs-http-client log -1
       - restore_cache:
           keys:
-            - v1-http-client-{{ checksum "~/ipfs/go-ipfs/go-ipfs-http-client/go.sum" }}
+            - v1-http-client-{{ checksum "~/tonyHup/go-ipfs/go-ipfs-http-client/go.sum" }}
             - v1-http-client-
       - run:
           name: go test -v ./...
           command: |
             export PATH=/tmp/circleci-workspace/bin:$PATH
             go test -v ./...
-          working_directory: ~/ipfs/go-ipfs/go-ipfs-http-client
+          working_directory: ~/tonyHup/go-ipfs/go-ipfs-http-client
       - save_cache:
-          key: v1-http-client-{{ checksum "~/ipfs/go-ipfs/go-ipfs-http-client/go.sum" }}
+          key: v1-http-client-{{ checksum "~/tonyHup/go-ipfs/go-ipfs-http-client/go.sum" }}
           paths:
             - ~/go/pkg/mod
             - ~/.cache/go-build/
@@ -267,28 +267,28 @@ jobs:
             git -C ipfs-webui log -1
       - restore_cache:
           keys:
-            - v1-ipfs-webui-{{ checksum "~/ipfs/go-ipfs/ipfs-webui/package-lock.json" }}
+            - v1-ipfs-webui-{{ checksum "~/tonyHup/go-ipfs/ipfs-webui/package-lock.json" }}
             - v1-ipfs-webui-
       - run:
           name: Installing dependencies
           command: |
             npm install
-          working_directory: ~/ipfs/go-ipfs/ipfs-webui
+          working_directory: ~/tonyHup/go-ipfs/ipfs-webui
       - run:
           name: Running upstream tests (finish early if they fail)
           command: |
             npm test || circleci-agent step halt
-          working_directory: ~/ipfs/go-ipfs/ipfs-webui
+          working_directory: ~/tonyHup/go-ipfs/ipfs-webui
       - run:
           name: Running tests with go-ipfs built from current commit
           command: npm test
-          working_directory: ~/ipfs/go-ipfs/ipfs-webui
+          working_directory: ~/tonyHup/go-ipfs/ipfs-webui
           environment:
             IPFS_GO_EXEC: /tmp/circleci-workspace/bin/ipfs
       - save_cache:
-          key: v1-ipfs-webui-{{ checksum "~/ipfs/go-ipfs/ipfs-webui/package-lock.json" }}
+          key: v1-ipfs-webui-{{ checksum "~/tonyHup/go-ipfs/ipfs-webui/package-lock.json" }}
           paths:
-            - ~/ipfs/go-ipfs/ipfs-webui/node_modules
+            - ~/tonyHup/go-ipfs/ipfs-webui/node_modules
   docker-build:
     executor: dockerizer
     steps:

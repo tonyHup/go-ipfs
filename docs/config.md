@@ -1057,7 +1057,7 @@ Type: `bool`
 
 Enables "automatic relay" mode for this node. This option does two _very_
 different things based on the `Swarm.EnableRelayHop`. See
-[#7228](https://github.com/ipfs/go-ipfs/issues/7228) for context.
+[#7228](https://github.com/tonyHup/go-ipfs/issues/7228) for context.
 
 Default: `false`
 

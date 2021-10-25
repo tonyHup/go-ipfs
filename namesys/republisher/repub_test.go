@@ -17,11 +17,11 @@ import (
 	"github.com/ipfs/go-ipns/pb"
 	path "github.com/ipfs/go-path"
 
-	"github.com/ipfs/go-ipfs/core"
-	"github.com/ipfs/go-ipfs/core/bootstrap"
-	mock "github.com/ipfs/go-ipfs/core/mock"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	. "github.com/ipfs/go-ipfs/namesys/republisher"
+	"github.com/tonyHup/go-ipfs/core"
+	"github.com/tonyHup/go-ipfs/core/bootstrap"
+	mock "github.com/tonyHup/go-ipfs/core/mock"
+	namesys "github.com/tonyHup/go-ipfs/namesys"
+	. "github.com/tonyHup/go-ipfs/namesys/republisher"
 )
 
 func TestRepublish(t *testing.T) {

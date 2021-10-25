@@ -4,7 +4,7 @@ import (
 	"sort"
 	"time"
 
-	version "github.com/ipfs/go-ipfs"
+	version "github.com/tonyHup/go-ipfs"
 	config "github.com/ipfs/go-ipfs-config"
 
 	logging "github.com/ipfs/go-log"

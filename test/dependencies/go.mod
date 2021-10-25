@@ -1,4 +1,4 @@
-module github.com/ipfs/go-ipfs/test/dependencies
+module github.com/tonyHup/go-ipfs/test/dependencies
 
 go 1.13
 

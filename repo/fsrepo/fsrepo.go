@@ -11,11 +11,11 @@ import (
 	"sync"
 
 	filestore "github.com/ipfs/go-filestore"
-	keystore "github.com/ipfs/go-ipfs/keystore"
-	repo "github.com/ipfs/go-ipfs/repo"
-	"github.com/ipfs/go-ipfs/repo/common"
-	mfsr "github.com/ipfs/go-ipfs/repo/fsrepo/migrations"
-	dir "github.com/ipfs/go-ipfs/thirdparty/dir"
+	keystore "github.com/tonyHup/go-ipfs/keystore"
+	repo "github.com/tonyHup/go-ipfs/repo"
+	"github.com/tonyHup/go-ipfs/repo/common"
+	mfsr "github.com/tonyHup/go-ipfs/repo/fsrepo/migrations"
+	dir "github.com/tonyHup/go-ipfs/thirdparty/dir"
 
 	ds "github.com/ipfs/go-datastore"
 	measure "github.com/ipfs/go-ds-measure"
@@ -419,7 +419,7 @@ func (r *FSRepo) openDatastore() error {
 		return fmt.Errorf("required Datastore.Spec entry missing from config file")
 	}
 	if r.config.Datastore.NoSync {
-		log.Warn("NoSync is now deprecated in favor of datastore specific settings. If you want to disable fsync on flatfs set 'sync' to false. See https://github.com/ipfs/go-ipfs/blob/master/docs/datastores.md#flatfs.")
+		log.Warn("NoSync is now deprecated in favor of datastore specific settings. If you want to disable fsync on flatfs set 'sync' to false. See https://github.com/tonyHup/go-ipfs/blob/master/docs/datastores.md#flatfs.")
 	}
 
 	dsc, err := AnyDatastoreConfig(r.config.Datastore.Spec)

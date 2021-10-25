@@ -17,7 +17,7 @@ This document contains a collection of tips, tricks, and pitfalls when running a
 go-ipfs node behind a reverse HTTP proxy.
 
 **WARNING:** Due to
-[nginx#1293](https://trac.nginx.org/nginx/ticket/1293)/[go-ipfs#6402](https://github.com/ipfs/go-ipfs/issues/6402),
+[nginx#1293](https://trac.nginx.org/nginx/ticket/1293)/[go-ipfs#6402](https://github.com/tonyHup/go-ipfs/issues/6402),
 parts of the go-ipfs API will not work correctly behind an NGINX reverse proxy
 as go-ipfs starts sending back a response before it finishes reading the request
 body. The gateway itself is unaffected.

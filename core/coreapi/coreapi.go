@@ -37,10 +37,10 @@ import (
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	record "github.com/libp2p/go-libp2p-record"
 
-	"github.com/ipfs/go-ipfs/core"
-	"github.com/ipfs/go-ipfs/core/node"
-	"github.com/ipfs/go-ipfs/namesys"
-	"github.com/ipfs/go-ipfs/repo"
+	"github.com/tonyHup/go-ipfs/core"
+	"github.com/tonyHup/go-ipfs/core/node"
+	"github.com/tonyHup/go-ipfs/namesys"
+	"github.com/tonyHup/go-ipfs/repo"
 )
 
 type CoreAPI struct {

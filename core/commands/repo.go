@@ -12,9 +12,9 @@ import (
 	"text/tabwriter"
 
 	humanize "github.com/dustin/go-humanize"
-	cmdenv "github.com/ipfs/go-ipfs/core/commands/cmdenv"
-	corerepo "github.com/ipfs/go-ipfs/core/corerepo"
-	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
+	cmdenv "github.com/tonyHup/go-ipfs/core/commands/cmdenv"
+	corerepo "github.com/tonyHup/go-ipfs/core/corerepo"
+	fsrepo "github.com/tonyHup/go-ipfs/repo/fsrepo"
 
 	cid "github.com/ipfs/go-cid"
 	bstore "github.com/ipfs/go-ipfs-blockstore"

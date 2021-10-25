@@ -11,8 +11,8 @@ import (
 	record "github.com/libp2p/go-libp2p-record"
 	routedhost "github.com/tonyHup/go-libp2p/p2p/host/routed"
 
-	"github.com/ipfs/go-ipfs/core/node/helpers"
-	"github.com/ipfs/go-ipfs/repo"
+	"github.com/tonyHup/go-ipfs/core/node/helpers"
+	"github.com/tonyHup/go-ipfs/repo"
 
 	"go.uber.org/fx"
 )

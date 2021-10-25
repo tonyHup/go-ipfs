@@ -10,12 +10,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	assets "github.com/ipfs/go-ipfs/assets"
-	oldcmds "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	"github.com/ipfs/go-ipfs/core/commands"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
+	assets "github.com/tonyHup/go-ipfs/assets"
+	oldcmds "github.com/tonyHup/go-ipfs/commands"
+	core "github.com/tonyHup/go-ipfs/core"
+	"github.com/tonyHup/go-ipfs/core/commands"
+	namesys "github.com/tonyHup/go-ipfs/namesys"
+	fsrepo "github.com/tonyHup/go-ipfs/repo/fsrepo"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	config "github.com/ipfs/go-ipfs-config"

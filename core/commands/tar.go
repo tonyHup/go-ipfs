@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipfs/go-ipfs/core/commands/cmdenv"
-	tar "github.com/ipfs/go-ipfs/tar"
+	"github.com/tonyHup/go-ipfs/core/commands/cmdenv"
+	tar "github.com/tonyHup/go-ipfs/tar"
 
 	"github.com/ipfs/go-ipfs-cmds"
 	dag "github.com/ipfs/go-merkledag"
