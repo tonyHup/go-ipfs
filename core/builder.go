@@ -40,7 +40,7 @@ func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
 	}
 
 	app := fx.New(
-		node.IPFS(ctx, cfg),
+		//node.IPFS(ctx, cfg),
 
 		fx.NopLogger,
 		fx.Extract(n),
