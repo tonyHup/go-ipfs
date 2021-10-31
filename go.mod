@@ -96,7 +96,7 @@ require (
 	github.com/prometheus/client_golang v1.7.1
 	github.com/stretchr/testify v1.6.1
 	github.com/syndtr/goleveldb v1.0.0
-	github.com/tonyHup/go-libp2p v0.100.5
+	github.com/tonyHup/go-libp2p v0.100.6
 	github.com/whyrusleeping/base32 v0.0.0-20170828182744-c30ac30633cc
 	github.com/whyrusleeping/go-sysinfo v0.0.0-20190219211824-4a357d4b90b1
 	github.com/whyrusleeping/multiaddr-filter v0.0.0-20160516205228-e903e4adabd7
