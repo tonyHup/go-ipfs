@@ -107,12 +107,14 @@ func StartListening(addresses []string) func(host host.Host) error {
 			return err
 		}
 
-		// list out our addresses
-		addrs, err := host.Network().InterfaceListenAddresses()
-		if err != nil {
-			return err
-		}
-		log.Infof("Swarm listening at: %s", addrs)
+		/*
+			// list out our addresses
+			addrs, err := host.Network().InterfaceListenAddresses()
+			if err != nil {
+				return err
+			}
+			log.Infof("Swarm listening at: %s", addrs)
+		*/
 		return nil
 	}
 }
