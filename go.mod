@@ -101,6 +101,7 @@ require (
 	github.com/prometheus/client_golang v1.11.0
 	github.com/stretchr/testify v1.7.0
 	github.com/syndtr/goleveldb v1.0.0
+	github.com/tonyHup/go-ipfs-privacy v0.0.6
 	github.com/whyrusleeping/go-sysinfo v0.0.0-20190219211824-4a357d4b90b1
 	github.com/whyrusleeping/multiaddr-filter v0.0.0-20160516205228-e903e4adabd7
 	go.opencensus.io v0.23.0
@@ -112,3 +113,5 @@ require (
 )
 
 go 1.16
+
+replace github.com/ipfs/go-unixfs v0.3.1 => github.com/tonyHup/go-unixfs v0.3.6

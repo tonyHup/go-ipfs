@@ -19,6 +19,7 @@ import (
 	files "github.com/ipfs/go-ipfs-files"
 	"github.com/ipfs/interface-go-ipfs-core/path"
 	"github.com/ipfs/tar-utils"
+	privacy "github.com/tonyHup/go-ipfs-privacy"
 )
 
 var ErrInvalidCompressionLevel = errors.New("compression level must be between 1 and 9")
@@ -81,6 +82,14 @@ may also specify the level of compression by specifying '-l=<1-9>'.
 		if err != nil {
 			return err
 		}
+		rp, err := api.ResolvePath(req.Context, p)
+		if err != nil {
+			return err
+		}
+        rsize, err := privacy.Prv.GetRealSize(rp.Cid().String())
+        if err == nil {
+            size = rsize
+        }
 
 		res.SetLength(uint64(size))
 
