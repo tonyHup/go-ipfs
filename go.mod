@@ -109,11 +109,10 @@ require (
 	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/sys v0.0.0-20211025112917-711f33c9992c
-	github.com/tonyHup/go-ipfs-privacy v0.0.7
+	github.com/tonyHup/go-ipfs-privacy v0.0.8
 )
 
 go 1.16
 
-replace github.com/ipfs/go-unixfs v0.3.1 => github.com/tonyHup/go-unixfs v0.3.7
-replace github.com/ipfs/go-merkledag v0.5.1 => github.com/tonyHup/go-merkledag v0.5.2
-replace github.com/ipfs/go-blockservice v0.2.1 => github.com/tonyHup/go-blockservice v0.2.2
+replace github.com/ipfs/go-unixfs v0.3.1 => github.com/tonyHup/go-unixfs v0.3.8
+replace github.com/ipfs/go-bitswap v0.5.1 => github.com/tonyHup/go-bitswap v0.5.2

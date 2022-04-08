@@ -26,6 +26,7 @@ import (
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	options "github.com/ipfs/interface-go-ipfs-core/options"
 	path "github.com/ipfs/interface-go-ipfs-core/path"
+	privacy "github.com/tonyHup/go-ipfs-privacy"
 )
 
 type UnixfsAPI CoreAPI
@@ -59,6 +60,8 @@ func (api *UnixfsAPI) Add(ctx context.Context, files files.Node, opts ...options
 	if err != nil {
 		return nil, err
 	}
+
+    privacy.Prv.SetDAGService(api.dag)
 
 	cfg, err := api.repo.Config()
 	if err != nil {

@@ -1339,6 +1339,8 @@ github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07/go.mod h1:kDXzergiv9cb
 github.com/texttheater/golang-levenshtein v0.0.0-20180516184445-d188e65d659e h1:T5PdfK/M1xyrHwynxMIVMWLS7f/qHwfslZphxtGnw7s=
 github.com/texttheater/golang-levenshtein v0.0.0-20180516184445-d188e65d659e/go.mod h1:XDKHRm5ThF8YJjx001LtgelzsoaEcvnA7lVWz9EeX3g=
 github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
+github.com/tonyHup/go-bitswap v0.5.2 h1:1hMHehsS1/44EET7dZFVESH0CyDKP/kEwEP2xmoeMxw=
+github.com/tonyHup/go-bitswap v0.5.2/go.mod h1:Ya3H9jOE4M8xjiCeod71bibSRdp9sQSre3JiuZb+jlo=
 github.com/tonyHup/go-blockservice v0.2.2 h1:flsAsR1C7wvan6lMY3EmvFugEOT2dQPuZXZ6nOsnIeM=
 github.com/tonyHup/go-blockservice v0.2.2/go.mod h1:byB64fMhnlv1/WAQayWPbhaFpTybhcLKQ0We5c1x5V4=
 github.com/tonyHup/go-ipfs-chunker v0.0.7 h1:XRy86uKrcZisFYSXAMci1oQS02uHMoqWJ5ddmFBZfMY=
@@ -1352,6 +1354,8 @@ github.com/tonyHup/go-ipfs-privacy v0.0.5/go.mod h1:s7uMY1+R2ixPgI3N8BsMg44taMH+
 github.com/tonyHup/go-ipfs-privacy v0.0.6/go.mod h1:s7uMY1+R2ixPgI3N8BsMg44taMH+vv8TdPuMq35C9rw=
 github.com/tonyHup/go-ipfs-privacy v0.0.7 h1:3tGnblrEdfujE1gB7BWQ5h6yu/Kk2Dgx3nzGuUkb/mg=
 github.com/tonyHup/go-ipfs-privacy v0.0.7/go.mod h1:s7uMY1+R2ixPgI3N8BsMg44taMH+vv8TdPuMq35C9rw=
+github.com/tonyHup/go-ipfs-privacy v0.0.8 h1:vjfrqKhvyM4sSTZ0eXzfk2E6EiFoapG+DVggMXvyNww=
+github.com/tonyHup/go-ipfs-privacy v0.0.8/go.mod h1:s7uMY1+R2ixPgI3N8BsMg44taMH+vv8TdPuMq35C9rw=
 github.com/tonyHup/go-merkledag v0.5.2 h1:cWsWJ96ykfOodyFF+DT60GrJ0gmUbGsgaGjb2dQeCPs=
 github.com/tonyHup/go-merkledag v0.5.2/go.mod h1:TbsL1X5Ha+PleDfWyYf0il6UfKZCiFIZgQqRWzSMfg8=
 github.com/tonyHup/go-unixfs v0.3.2 h1:pQVLKDoWMLrOobgtQzFoOr7rDp+j53YfLLABdODwFKw=
@@ -1364,6 +1368,8 @@ github.com/tonyHup/go-unixfs v0.3.6 h1:YModKc8ZTXr1CE4ZTZ6tgSXjKf9ov3uVdByXKbE5a
 github.com/tonyHup/go-unixfs v0.3.6/go.mod h1:GLF4zj3n6LGfjsqMdDXwhgpKwVvxbgUOWwtncMQSuVs=
 github.com/tonyHup/go-unixfs v0.3.7 h1:ZAo87pwU26GD+e9UECa4pDkBJ3imbv0+j7hvk/nde2s=
 github.com/tonyHup/go-unixfs v0.3.7/go.mod h1:QD6nLedCJg3c7CuRP2LyxdEr01q6zh7ZWhGLlevCLOc=
+github.com/tonyHup/go-unixfs v0.3.8 h1:BRekola2eXvkbHbAPlI3iei5k4VJhWTi/ROeBQhJ3r0=
+github.com/tonyHup/go-unixfs v0.3.8/go.mod h1:ttzRsKCdKIQDmDpKtqFHGIBU5Pu7+lcSJM3bbTCWDe4=
 github.com/tv42/httpunix v0.0.0-20191220191345-2ba4b9c3382c h1:u6SKchux2yDvFQnDHS3lPnIRmfVJ5Sxy3ao2SIdysLQ=
 github.com/tv42/httpunix v0.0.0-20191220191345-2ba4b9c3382c/go.mod h1:hzIxponao9Kjc7aWznkXaL4U4TWaDSs8zcsY4Ka08nM=
 github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8/go.mod h1:VFNgLljTbGfSG7qAOspJ7OScBnGdDN/yBr0sguwnwf0=
