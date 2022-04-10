@@ -17,6 +17,7 @@ import (
 	dag "github.com/ipfs/go-merkledag"
 	"github.com/ipfs/interface-go-ipfs-core/options"
 	path "github.com/ipfs/interface-go-ipfs-core/path"
+	privacy "github.com/tonyHup/go-ipfs-privacy"
 )
 
 type Node struct {
@@ -63,6 +64,7 @@ directly. Deprecated, use more modern 'ipfs dag' and 'ipfs files' instead.`,
 		"patch": ObjectPatchCmd,
 		"put":   ObjectPutCmd,
 		"stat":  ObjectStatCmd,
+		"prog":  ObjectProgCmd,
 	},
 }
 
@@ -266,6 +268,80 @@ DEPRECATED and provided for legacy reasons. Use 'ipfs dag get' instead.
 			}
 			_, err = w.Write(marshaled)
 			return err
+		}),
+	},
+}
+
+type ProgressInfo struct {
+    Progress float32
+}
+
+// ObjectProgCmd object prog command
+var ObjectProgCmd = &cmds.Command{
+	Helptext: cmds.HelpText{
+		Tagline: "Deprecated way to read stats for the dag-pb node. Use 'files prog' instead.",
+		ShortDescription: `
+'ipfs object prog' is a plumbing command to print dag-pb node statistics.
+<key> is a base58 encoded multihash.
+
+DEPRECATED: modern replacements are 'files prog' and 'dag prog'
+`,
+		LongDescription: `
+'ipfs object prog' is a plumbing command to print dag-pb node statistics.
+<key> is a base58 encoded multihash. It outputs to stdout:
+
+	Progress        the progress of given cid
+
+DEPRECATED: Provided for legacy reasons. Modern replacements:
+
+  For unixfs, 'ipfs files prog' can be used:
+
+    $ ipfs files prog --with-local /ipfs/QmWfVY9y3xjsixTgbd9AorQxH7VtMpzfx2HaWtsoUYecaX
+	QmWfVY9y3xjsixTgbd9AorQxH7VtMpzfx2HaWtsoUYecaX
+	Size: 5
+	CumulativeSize: 13
+	ChildBlocks: 0
+	Type: file
+	Local: 13 B of 13 B (100.00%)
+
+  Reported sizes are based on metadata present in root block, and should not be
+  trusted.  A slower, but more secure alternative is 'ipfs dag prog', which
+  will work for every DAG type.  It comes with a benefit of calculating the
+  size by walking the DAG:
+
+	$ ipfs dag prog /ipfs/QmWfVY9y3xjsixTgbd9AorQxH7VtMpzfx2HaWtsoUYecaX
+	Size: 13, NumBlocks: 1
+`,
+	},
+
+	Arguments: []cmds.Argument{
+		cmds.StringArg("key", true, false, "Key of the object to retrieve, in base58-encoded multihash format.").EnableStdin(),
+	},
+	Options: []cmds.Option{
+	},
+	Run: func(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) error {
+		p, err := privacy.Prv.GetProgress(req.Context, req.Arguments[0])
+		if err != nil {
+			return err
+		}
+
+        progress := &ProgressInfo{
+            Progress: p,
+        }
+
+		return cmds.EmitOnce(res, progress)
+	},
+	Type: ProgressInfo{},
+	Encoders: cmds.EncoderMap{
+		cmds.Text: cmds.MakeTypedEncoder(func(req *cmds.Request, w io.Writer, out *ProgressInfo) error {
+			wtr := tabwriter.NewWriter(w, 0, 0, 1, ' ', 0)
+			defer wtr.Flush()
+			fw := func(s string, n float32) {
+				fmt.Fprintf(wtr, "%s:\t%f\n", s, n)
+			}
+			fw("Progress", out.Progress)
+
+			return nil
 		}),
 	},
 }
